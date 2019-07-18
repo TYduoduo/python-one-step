@@ -1,0 +1,8 @@
+#include <iostream>
+#define M(x,y) (x)<(y)? (x):(y)
+void main()
+{
+	int i = 10, j = 15, k;
+	k = 10 * M(i, j);
+	std::cout<<k ;
+}
