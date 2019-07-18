@@ -1,5 +1,6 @@
 #include <iostream>
 #define M(x,y) (x)<(y)? (x):(y)
+using namespace std;
 void main()
 {
 	int i = 10, j = 15, k;
