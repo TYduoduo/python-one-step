@@ -1,10 +1,31 @@
-#include "pch.h"
-#include<iostream>
-void main()
-{
-	int n[2] = { 0 }, i, j, k = 2;
-	for (i = 0; i < k; i++)
-		for (j = 0; j < k; j++)
-			n[j] = n[i] + 1;
-	std::cout << n[1];
-}
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+x1=np.linspace(0.0,5.0)                 #横坐标从0-5
+x2=np.linspace(0.0,2.0)
+x3=np.linspace(0.0,10.0)
+ 
+ 
+y1=np.cos(2*np.pi*x1)*np.exp(-x1)
+y2=np.cos(2*np.pi*x2)
+y3=x3*x3+2
+ 
+ 
+plt.subplot(5,5,1)                       #在五行五列第一个
+plt.plot(x1,y1,'o-')
+plt.title('A tale of 2 subplot')
+plt.ylabel('Damped oscillation')
+ 
+ 
+plt.subplot(5,5,11)                       #在五行五列第二十个
+plt.plot(x2,y2,'.-')
+plt.title('time(s)')
+plt.ylabel('Undamped')
+ 
+ 
+plt.subplot(5,1,5)                       #在五行五列第五个
+plt.plot(x3,y3,'^-')
+plt.title('x3data')
+plt.ylabel('y3data')
+ 
+plt.show()
