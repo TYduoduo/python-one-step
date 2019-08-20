@@ -1,3 +1,2 @@
 # duoduo_text
-learning 
-//shu zu
+python库学习图表显示基础
