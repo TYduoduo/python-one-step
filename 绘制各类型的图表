@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(7) #x产生7组
+#y1,y2 = np.random.randint(1,49,size=(2,7)) #y1,y2随机产生,7*7=49
+y1=[5,5,5,5,5,5,5]
+y2=[1,2,3,4,5,6,7]
+width = 0.25 #代表柱状图的宽度 
+ax = plt.subplot(1,1,1)
+ax.bar(x,y1,width,color='blue',label='y1')   #bar 是绘制柱状图
+ax.bar(x+width,y2,width,color='red',label='y3') #设置x轴，y轴，宽度，颜色
+ax.set_xticks(x+.5*width) #一半的柱宽正好可以让字母处于中间
+ax.set_xticklabels(['a','b','c','d','e','f','g']) #自定义x的刻度标签的内容
+
+plt.plot(x,y1) #这两行又在原有基础上连了一个折线图
+plt.plot(x,y2)
+plt.legend(loc=0)
+plt.ylabel('LY1')
+plt.xlabel('LX1')
+plt.title('title is just here')
+
+#以下为饼图
+label=['A','B','C','D']
+size=[12,30,45,10] #数字为饼的分块占比
+fig,ax=plt.subplots()  #面向对象画图
+explode=(0,0.2,0,0)    #第二块扇形移出，数值越大，移除的距离越远
+plt.title('title2 is just here')
+ax.pie(size,labels=label,autopct='%1.1f%%',shadow=True,startangle=45,explode=explode) #autopct自动显示百分比  shadow=90显示出阴影    startangle=90饼图倾斜与正
+ax.axis('equal')   #将椭圆变为圆
+ 
+plt.show()
+
+
