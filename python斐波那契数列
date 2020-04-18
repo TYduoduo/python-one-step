@@ -1,0 +1,18 @@
+def Fibonacci_series (n_th):
+     if n_th==1:
+        return (1)
+     elif n_th==2:
+        return(1)
+     elif n_th>2:
+        return Fibonacci_series(n_th-1)+Fibonacci_series(n_th-2)
+z=0
+n_th=1
+while n_th>=1:
+    print("Input n:")
+    n_th=input()
+    n_th=int(n_th)
+    if n_th==0:
+        print("Fibonacci series calculation has been stopped")
+    if n_th>=1:
+       print("The n_th number of Fibonacci series:")
+       print(Fibonacci_series(n_th))
